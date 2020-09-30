@@ -26,20 +26,27 @@ int main(){
      do{
     rodada = rodada + 1; //adiciona valor 1 em rodada, afim de controlar quantas rodadas ocorreram
     printf("----------------\n--- Rodada %i ---\n----------------\n\n", rodada);
-    
+
+//Selecao de opcao jogador 1 com prevencao de erros
+
     printf("Jogador 1: Pedra, Papel ou Tesoura ?\n");
     scanf(" %c", &jog1);
     jog1 = toupper(jog1); //transforma todos os caracteres em maiusculo
-    printf(">Voce escolheu: %c.\n\n", jog1);
+    printf(">Voce escolheu: %c.\n", jog1);
+
+
+//Selecao de opcao jogador 2 com prevencao de erros
 
     printf("Jogador 2: Pedra, Papel ou Tesoura ?\n");
     scanf(" %c", &jog2);
     jog2 = toupper(jog2); //transforma todos os caracteres em maiusculo
-    printf(">Voce escolheu: %c.\n\n", jog2);
+    printf(">Voce escolheu: %c.\n", jog2);
+
 
    //Checagem de quem ganhou + limitador de rodadas.
  // ifelse para definir empate antes do switch case para checar quem ganha ou perde
- if (!(jog1 == jog2)){
+
+if (!(jog1 == jog2)){
    switch (jog1)
    {
    case 'P':
@@ -88,6 +95,7 @@ int main(){
      printf("\n>>EMPATE!!<<\n Tente novamente.\n");
      rodada = rodada - 1; //retrai uma rodada afim de manter a melhor de tres
  }
+
     if( w1 == 2 || w2 == 2){
         //adiciona valor 3 para rodadas para encerrar loop do while
         rodada = 3;
